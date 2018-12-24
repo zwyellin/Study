@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="extjs/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="extjs/ext-all.js"></script>
+    <script type="text/javascript" src="extjs/ext-lang-zh_CN.js"></script>
+    <link href="extjs/resources/css/ext-all.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        Ext.onReady(function(){
+            //面板 Panel
+            //布局 Layout
+            //组件 Component
+            //窗口 Window
+            //对话框 Dialog
+            /*添加按钮 会添加到表单的buttons */
+            var btReset=new Ext.Button({
+                text:'重置',
+                handler:function(val){//handler:首发方法处理事件。
+                    console.log(form.getForm());//获得表单组件，其中form是创建的表单变量
+                    console.log(Ext.get("formId"));//获得表单的dom
+                    form.getForm().reset();//表单重置
+                    alert('按钮点击触发事件：你点击了'+val.text)
+                }
+            });
+            var btSubmit=new Ext.Button({
+                text:'提交',
+                listeners:{//listeners:事件监听。
+                    'click':function(){
+                        if(form.getForm().isValid()){//表单校验
+                            //获得表单内容
+                            console.log(form.getForm().getValues());//获得表单内容，包括隐藏域的
+                            //Ext.get是获得该组件的element。即Ext.getCmp('').el=Ext.get('')
+                             console.log('通过id访问组件'+Ext.get("txName").dom.value)//通过id 
+                             //Ext.getCmp是获得该组件
+                             console.log(Ext.getCmp("provinceId").lastSelectionText,Ext.getCmp("provinceId").lastSelectionText)
+                             Ext.MessageBox.alert('提示', '提交成功');
+                        }else{
+                            Ext.MessageBox.alert('提示', '输入不合法');
+                        }},
+                    'dbClick':function(){Ext.MessageBox.alert('提示', '鼠标移过按钮');}
+                }
+            });
+            /* 添加文本输入框框 会添加到表单的items*/
+            Ext.QuickTips.init();//初始化消息提示框
+            Ext.form.Field.prototype.msgTarget = 'side';
+            var txName=new Ext.form.TextField({
+                width:140,
+                id:'txName',
+                allowBlank:false,//能否为空
+                blankText:'不能为空',
+                fieldLabel:'名字',//相当于label
+                emptyText :'请输入姓名',
+                inputType:'string',//输入类型 ，即input type
+                name:'name',
+                maxLength:10,//对应还要minLength及minLangthText
+                maxLangthText:'输入太多字符',
+                vtypeText:'错误信息sdfsdfsd',
+                validator:function(val){//
+                    console.log("校验函数",val)
+                    if(val.length<5) return false;
+                }, 
+                msgTarget:'side'//其它还有'ftop'
+            });
+            var txPass=new Ext.form.TextField({
+                width:140,
+                allowBlank:false,//能否为空
+                blankText:'不能为空',
+                fieldLabel:'密码',//相当于label
+                inputType:'password',//输入类型 ，即input type
+                name:'pass',//提交的字段
+                maxLength:10,//对应还要minLength及minLangthText
+                maxLangthText:'输入太多字符',
+                vtypeText:'错误信息sdfsdfsd',
+                validator:function(val){//
+                    console.log("校验函数",val)
+                    if(val.length<5) return false;
+                }, 
+                msgTarget:'side'//其它还有'ftop'
+            });
+            /* 添加隐藏域 添加到表单中*/
+            var hiddenEle=new Ext.form.Hidden({
+                name:'id',
+                value:'1'
+            });
+            /* 添加时间组件 添加到表单中*///提交的字段 [name:输入框值]  birthDay:''
+            var dateBirthDay=new Ext.form.DateField({
+                fieldLabel:'出生时间',
+                blankText:'选择日期',
+                name:'birthDay',
+                allowBlank:false,//能否为空
+                editable:false,//能否编辑
+                format:'y、m、d',//默认格式'y-m-d'，可以选择y m d或任意组合和顺序，其中可以选择分隔符
+
+            });
+            /* 增加单选按钮 组 添加到表单中*/   //提交的字段 [name:inputValue]  sex:1  
+            var radio=new Ext.form.Radio({
+                boxLabel:'女',
+                name:'sex',//注意要同name,才能实现单选作用
+                inputValue:1,//
+                checked:true
+            })
+            var radio_alone=new Ext.form.Radio({
+                fieldLabel:"性别'is alone'",//这个只有在独自使用不再RadioGroup中才有效果
+                boxLabel:'女',
+                name:'sex',//注意要同name,才能实现单选作用，不在同一个组中，在同一form都能实现单选作用,因为同name，所以不会额外提交这个字段
+                inputValue:2,
+                checked:true
+            })
+            var radioGroup=new Ext.form.RadioGroup({
+                fieldLabel:'性别',
+                width:100,
+                items:[{  //这边测试，一个写在里面。一个外面
+                    boxLabel:'男',
+                    name:'sex',
+                    inputValue:0,
+                    checked:false
+                },radio]
+            });
+            /* 复选框 添加到表单中*/ //提交的字段 [name:inputValue] 得到的是数组 love[1,2]  
+            var checkbox=new Ext.form.Checkbox({
+                boxLabel:'运动',
+                name:'love',
+                inputValue:3,
+            })
+            var checkbox_alone=new Ext.form.Checkbox({
+                fieldLabel:"爱好'is alone'",
+                boxLabel:'唱歌',
+                name:'love',
+                inputValue:4,
+            })
+            var checkboxGroup=new Ext.form.CheckboxGroup({
+                fieldLabel:'爱好',
+                width:200,
+                items:[{//这边测试，一个写在里面。一个外面
+                    boxLabel:'上网',
+                    name:'love',
+                    inputValue:0,
+                },{
+                    boxLabel:'旅游',
+                    name:'love',
+                    inputValue:1,
+                },{
+                    boxLabel:'购物',
+                    name:'love',
+                    inputValue:2,
+                },checkbox]
+            })
+            /* 下拉列表 会添加到表单中 */
+            var comboLocalStore=new Ext.data.ArrayStore({
+                fields: ['id', 'value','other'],
+                data: [[1, '江西',110], [2, '江苏',120], [3, '安徽',130]]
+            })
+            var comboBoxLocal=new Ext.form.ComboBox({
+                id:'provinceId',
+                fieldLabel:"省份",
+                hiddenName:'province',
+                emptyText:'请选择',
+                triggerAction:"all",//选择之后点击下拉是依据什么来搜索的， all加载所有，query当前行字段
+                editable: false,//是否可编辑
+                mode:'local',//标明数据来源：默认remote,即表示从服务器读取数据。还有local,表示本地数据
+                store:comboLocalStore,//数据
+                displayField: 'value',//显示字段。绑定数据之后，显示场是哪个字段，对应数据源storm中的fields中的字段：这边即id或value
+                valueField: 'id',//如果设置了hiddenName  则提交字段为[hiddenName:valueField],如果设置的是nanme,则提交字段为[name:displayField]
+                listeners:{
+                    'beforeselect':function(){},//选中前时事件
+                    'select':function(that){//选中时事件
+                        console.log(that);
+                        console.log(that.lastSelectionText);    //获得displayField 值
+                        console.log(that.value);                //获得valueField 值
+                    }
+                }
+            })
+            /* 增加表单 会添加到窗体中*/
+            var form=new Ext.form.FormPanel({
+                frame:true,//外边框是否可定义True表示为面板的边框外框可自定义的，false表示为边框可1px的点线（默认为false）。
+                title:"这个是表单标题",
+                id:'formId',
+                html:"<a href='http://www.baidu.com'>我是表单内容这是超链接baidu。com</a>",
+                items:[txName,txPass,hiddenEle,dateBirthDay,radioGroup,radio_alone,checkboxGroup,checkbox_alone,comboBoxLocal],//位置都可以放,这里是内容区
+                buttons:[btReset,btSubmit]//但是这个是放在下面的，这里是按钮区，不局限于按钮
+            });
+        
+            /* 创建窗体 */
+            var win = new Ext.Window({
+                    title: '窗口',
+                    width: 476,
+                    height: 374,
+                    html: '<div>这里是窗体内容</div>',
+                    resizable: true,
+                    modal: true,      //
+                    closable: true,   //是否可以关闭
+                    maximizable: true,//是否有最大按钮
+                    minimizable: true,//是否有最小按钮
+                    buttonAlign:'right',//left、center、right)，默认值为right
+                    //其它属性tbar、bbar、fbar、header、footer
+                    items:[form]
+            });
+            win.show(); 
+     
+      
+        });
+        
+    </script>
+</head>
+<body>
+    <div id='toolbar'></div>
+</body>
+</html>
