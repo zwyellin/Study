@@ -20,6 +20,11 @@ export default {
   name: 'App',
   components: {
   },
+  data(){
+    return {
+
+    }
+  }
 }
 </script>
 //样式

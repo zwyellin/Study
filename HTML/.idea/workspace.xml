@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4efa4dc-4299-408d-9ed4-1c857100dd2b" name="Default" comment="" />
+    <list default="true" id="c4efa4dc-4299-408d-9ed4-1c857100dd2b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ext/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ext/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="HTML.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,7 +108,7 @@
     <session id="-770822346">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.12" value="2" />
@@ -298,7 +301,7 @@
       <path value="$PROJECT_DIR$/vue/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="777" />
     <option name="y" value="120" />
     <option name="width" value="1014" />
@@ -543,23 +546,22 @@
       <workItem from="1542589028072" duration="595000" />
       <workItem from="1542675623012" duration="748000" />
       <workItem from="1543376749824" duration="604000" />
-      <workItem from="1545622335936" duration="548000" />
+      <workItem from="1545622335936" duration="618000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="443154000" />
+    <option name="totallyTimeSpent" value="443224000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info content_ui="combo" x="0" y="23" width="1366" height="715" id="Project" order="0" sideWeight="0.49894738" visible="true" weight="0.15753424" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5010526" side_tool="true" weight="0.17633928" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49925596" weight="0.3289256" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8660714" visible="true" weight="0.12581345" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8660714" weight="0.12581345" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
