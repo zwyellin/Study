@@ -9,8 +9,7 @@ import App from './App'
 
 Vue.config.productionTip = false;
 //
-import store from "./store/index"
-console.log(store.state.mount);
+
 
 
 //
@@ -21,45 +20,20 @@ import ly1 from './components/ly1'
 import ly2 from './components/ly2'
 //配置路由
 const routes=[
-  {path:'/test',component:test,alias:'/as', meta: {
-      keepAlive: true
-    },
-    },
+  {path:'/test',component:test,alias:'/as'
+  },
   {path:'/hello',component:HelloWorld,name:'Nhello'},
   {
     name:'Nly1',
-    path: '/ly1/:id/:name',
+    path: '/ly1',
     component: ly1,
-    meta: {
-      keepAlive: false
-    },
-    props:true,
-    beforeEnter: (to, from, next) => {
-      let videoReg = /^\/test/;
-      if(from.path==="/"){
-         console.log("页面刷新");
-        to.meta.keepAlive=false;
-      }
-      else if (videoReg.test(from.path)) {
-           to.meta.keepAlive=false;
-           console.log("从test那里进来的")
-      }else{
-        to.meta.keepAlive=true;
-      }
-      next();
-    }
   },
-  {path:'/ly2',
+  { path:'/ly2',
     component:ly2,
     name:'Nly2',
-    meta: {
-      keepAlive: true
-    },
-    props:true,
   }
 ];
 const router = new VueRouter({
-  mode:'history',
   routes
 });
 /* eslint-disable no-new */

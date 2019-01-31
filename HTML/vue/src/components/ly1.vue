@@ -1,50 +1,71 @@
 <template>
     <div>
-     路由1{{this.$route.params}}{{id}},aaaa{{name}}--{{storeA}}
-      <input/>
-      <div v-show="isShow">Show内容</div>
-      <button @click="isShow=!isShow">切换</button>
-      <button @click="method1">方式1</button>
-      <button @click="method2">方式2</button>
-      <router-view name="a"></router-view>
-      <router-view name="b"></router-view>
+     路由1
     </div>
 </template>
 
 <script>
   import ly2 from './ly2'
-  import store from '../assets/chare'
-  console.log(store.state.a+"---ly1");
-  store.state.a=11;
     export default {
-        name: "ly1",
-      props:['id','name'],
+      name: "ly1",
       data(){
           return {
-             isShow:false,
-            storeA:store
+             data1:"this is data1",
           }
       },
       components:{
           ly2
       },
       mounted:function () {
+
       },
       methods:{
-        method1:function () {
-          console.log("click")
-          this.$router.push({name:'Nhello',params:{user:12,id:10}});
+          method1(){
 
-        },
-        method2:function () {
-          this.$router.push({path:'ly1/45', query: { plan: 'private' }});
-        }
-
+          },
+          method2(){
+              
+          }
       },
       filters:{
 
-
+      },
+      beforeCreate(){
+          console.log(this.$options.name+"-----"+"beforeCreate");
+      },
+      created(){
+          console.log(this.$options.name+"-----"+"Create");
+          setTimeout(() => {
+              this.data1=1;
+          }, 2000);
+          //只有视图中用到的属性，修改了才会触发更新 生命周期
+          //一开始，会用初始值，渲染到DOM。不会触发 更新生命周期
+      },
+      beforeMount(){
+           console.log(this.$options.name+"-----"+"beforeMount");
+      },
+      mounted(){
+            console.log(this.$options.name+"-----"+"mounted");
+      },
+      beforeUpdate(){
+          console.log(this.$options.name+"-----"+"beforeUpdate");
+      },
+      updated(){
+          console.log(this.$options.name+"-----"+"updated");
+      },
+      activated(){
+           console.log(this.$options.name+"-----"+"activated");
+      },
+      deactivated(){
+          console.log(this.$options.name+"-----"+"deactivated");
+      },
+      beforeDestroy(){
+           console.log(this.$options.name+"-----"+"beforeDestroy");
+      },
+      destroyed(){
+           console.log(this.$options.name+"-----"+"destroyed");
       }
+
     }
 </script>
 

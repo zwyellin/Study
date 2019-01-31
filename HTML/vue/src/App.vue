@@ -2,14 +2,11 @@
 <template>
   <div id="app">
 
-    <router-link  :to="{name:'Nly1',params:{name:10,id:11}}">ONe</router-link>
-    <router-link :to="{path:'ly2?aa=12'}">Two</router-link>
+    <router-link  :to="{name:'Nly1'}">ONe</router-link>
+    <router-link :to="{path:'ly2'}">Two</router-link>
     <router-link to="/test">Test</router-link>
     <div class="routerView">
-      <keep-alive>
-       <router-view v-if="!$route.meta.keepAlive"></router-view>
-      </keep-alive>
-      <router-view v-if="$route.meta.keepAlive"></router-view>
+      <router-view ></router-view>
     </div>
 
   </div>

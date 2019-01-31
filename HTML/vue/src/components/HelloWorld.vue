@@ -1,6 +1,6 @@
 <template>
   <div >
-    {{ msg }}{{this.$router.params}}
+    HelloWorld
   </div>
 </template>
 
