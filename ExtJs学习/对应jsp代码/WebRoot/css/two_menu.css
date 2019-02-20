@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+.menuIcon{
+	 background-repeat:no-repeat;
+	 background-position:center;
+	 background-size:20px 20px;
+}
+.menuIcon1{
+ 	background-image:url('../icon/1.png');
+}
+.menuIcon2{
+	background-image:url('../icon/2.png')
+}
+.menuIcon3{
+	background-image:url('../icon/3.png')
+}
+.menuIcon4{
+	background-image:url('../icon/4.png')
+}
+.menuIcon5{
+	background-image:url('../icon/5.png')
+}
+.menuIcon6{
+	background-image:url('../icon/6.png')
+}
+.menuIcon7{
+	background-image:url('../icon/7.png')
+}
+.menuIcon8{
+	background-image:url('../icon/8.png')
+}
+.menuIcon9{
+	background-image:url('../icon/9.png')
+}
+.menuIcon10{
+	background-image:url('../icon/10.png')
+}
+
+
+.tree_f1{
+	background:red;
+}
