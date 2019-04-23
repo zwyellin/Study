@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4efa4dc-4299-408d-9ed4-1c857100dd2b" name="Default" comment="" />
+    <list default="true" id="c4efa4dc-4299-408d-9ed4-1c857100dd2b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/one" beforeDir="false" afterPath="$PROJECT_DIR$/one" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/one/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/one/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/one/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/one/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../commonH5Project" beforeDir="false" afterPath="$PROJECT_DIR$/../commonH5Project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_qd" beforeDir="false" afterPath="$PROJECT_DIR$/../express_qd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wxMiniPrograme" beforeDir="false" afterPath="$PROJECT_DIR$/../wxMiniPrograme" afterDir="false" />
+    </list>
     <ignored path="HTML.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,8 +113,8 @@
     <session id="-770822346">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.12" value="2" />
@@ -115,12 +123,13 @@
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="3" />
+          <entry key="project.open.time.4" value="4" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -179,8 +188,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/one/www/nodeOne/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="53" column="27" lean-forward="true" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+            <state relative-caret-position="252">
+              <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -299,7 +308,7 @@
       <path value="$PROJECT_DIR$/vue/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="777" />
     <option name="y" value="120" />
     <option name="width" value="1014" />
@@ -330,7 +339,6 @@
       <foldersAlwaysOnTop value="false" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -373,14 +381,6 @@
             <path>
               <item name="HTML" type="b2602c69:ProjectViewProjectNode" />
               <item name="HTML" type="462c0819:PsiDirectoryNode" />
-              <item name="one" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="two" type="462c0819:PsiDirectoryNode" />
-              <item name="three" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HTML" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HTML" type="462c0819:PsiDirectoryNode" />
               <item name="vue" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -388,25 +388,12 @@
               <item name="HTML" type="462c0819:PsiDirectoryNode" />
               <item name="vue" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HTML" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HTML" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HTML" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HTML" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -546,16 +533,21 @@
       <workItem from="1543376749824" duration="604000" />
       <workItem from="1545622335936" duration="618000" />
       <workItem from="1547000993656" duration="615000" />
+      <workItem from="1551922186469" duration="621000" />
+      <workItem from="1554188560682" duration="740000" />
+      <workItem from="1555145362772" duration="615000" />
+      <workItem from="1555294737910" duration="602000" />
+      <workItem from="1555661432145" duration="604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="443839000" />
+    <option name="totallyTimeSpent" value="447021000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" x="0" y="23" width="1366" height="715" id="Project" order="0" sideWeight="0.49894738" visible="true" weight="0.2118019" />
+      <window_info content_ui="combo" x="0" y="23" width="1366" height="715" id="Project" order="0" sideWeight="0.49894738" visible="true" weight="0.02792413" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5010526" side_tool="true" weight="0.17633928" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -871,8 +863,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/one/www/nodeOne/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="53" column="27" lean-forward="true" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+        <state relative-caret-position="252">
+          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
         </state>
       </provider>
     </entry>
